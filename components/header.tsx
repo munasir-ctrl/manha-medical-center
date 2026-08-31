@@ -13,7 +13,6 @@ import {
   Search,
   ChevronDown,
   MessageCircle,
-  Heart,
   ChevronRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -24,7 +23,6 @@ import { cn } from '@/lib/utils';
 import { useLanguage } from '@/context/LanguageContext';
 import * as Icons from 'lucide-react';
 
-// Helper to convert multi-word titles into camelCase keys (e.g., "Health Packages" -> "healthPackages")
 const getTranslationKey = (str: string) => {
   return str
     .toLowerCase()
@@ -61,14 +59,14 @@ export function Header() {
   return (
     <Fragment>
       {/* Top bar */}
-      <div className="hidden bg-primary text-primary-foreground lg:block">
+      <div className="hidden bg-muted/50 border-b border-border/40 text-muted-foreground lg:block">
         <div className="container-wide flex items-center justify-between py-2 text-xs">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5" />
+            <span className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <Phone className="h-3.5 w-3.5 text-primary" />
               {siteConfig.phoneDisplay}
             </span>
-            <span className="text-primary-foreground/80">
+            <span className="text-muted-foreground">
               {siteConfig.address.area}, {siteConfig.address.city}
             </span>
           </div>
@@ -76,18 +74,18 @@ export function Header() {
             <button
               onClick={() => toggleLanguage('en')}
               className={cn(
-                'rounded px-2 py-0.5 transition hover:bg-white/10',
-                lang === 'en' && 'font-bold underline'
+                'rounded px-2 py-0.5 transition hover:text-primary',
+                lang === 'en' && 'font-bold text-primary underline'
               )}
             >
               English
             </button>
-            <span className="text-primary-foreground/30">|</span>
+            <span className="text-border">|</span>
             <button
               onClick={() => toggleLanguage('ar')}
               className={cn(
-                'rounded px-2 py-0.5 transition hover:bg-white/10',
-                lang === 'ar' && 'font-bold underline'
+                'rounded px-2 py-0.5 transition hover:text-primary',
+                lang === 'ar' && 'font-bold text-primary underline'
               )}
             >
               العربية
@@ -99,17 +97,15 @@ export function Header() {
      {/* Main header */}
       <header
         className={cn(
-          'sticky top-0 z-50 w-full transition-all duration-300',
-          scrolled
-            ? 'glass shadow-soft'
-            : 'bg-background/0'
+          'sticky top-0 z-50 w-full transition-all duration-300 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40',
+          scrolled && 'shadow-soft'
         )}
       >
         <div className="container-wide">
           <div className="flex h-16 items-center justify-between gap-4 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center focus-ring rounded-lg py-1" aria-label={`${siteConfig.name} home`}>
-              <div className="relative flex h-12 w-44 shrink-0 items-center">
+              <div className="relative flex h-10 w-44 shrink-0 items-center">
                 <Image 
                   src="/logo.png" 
                   alt="Manha Medical Center Logo" 
@@ -155,7 +151,7 @@ export function Header() {
                           transition={{ duration: 0.2 }}
                           className="absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-3"
                         >
-                          <div className="glass rounded-2xl border border-border/60 p-4 shadow-card">
+                          <div className="glass rounded-2xl border border-border/60 p-4 shadow-card bg-background/95 backdrop-blur">
                             <div className="grid grid-cols-2 gap-1">
                               {link.items.map((item) => {
                                 const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[item.icon] || Icons.Circle;
@@ -240,7 +236,7 @@ export function Header() {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="overflow-hidden border-t border-border glass"
+              className="overflow-hidden border-t border-border bg-background"
             >
               <div className="container-wide py-4">
                 <form action="/search" method="get" className="flex items-center gap-2">
