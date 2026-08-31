@@ -296,3 +296,18 @@ export const healthPackages: HealthPackage[] = [
     popular: false,
   },
 ];
+
+export const testimonials = [
+  {
+    name: "Fatima Al Ali",
+    comment: "Exceptional care and very professional doctors at Manha Medical Center. Highly recommended!",
+    rating: 5,
+    department: "General Medicine"
+  },
+  {
+    name: "Mohammed Al Hashmi",
+    comment: "Very clean clinic in Muwaileh with seamless appointment booking and polite staff.",
+    rating: 5,
+    department: "Dentistry"
+  }
+];
