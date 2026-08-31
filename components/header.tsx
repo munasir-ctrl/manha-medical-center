@@ -108,7 +108,7 @@ export function Header() {
             <Link href="/" className="flex items-center focus-ring rounded-lg py-1" aria-label={`${siteConfig.name} home`}>
               <div className="relative flex h-10 w-44 shrink-0 items-center">
                 <Image 
-                  src="/logo.png" 
+                  src="/Logo.png"
                   alt="Manha Medical Center Logo" 
                   fill
                   sizes="176px"
