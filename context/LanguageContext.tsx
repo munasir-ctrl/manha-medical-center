@@ -31,7 +31,6 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Homepage Hero Section
     careThatFeelsLike: "Care That Feels Like",
-    home: "Home",
     heroSubtitle: "Experience advanced medical, dental, and specialized healthcare with compassionate professionals dedicated to your family's well-being.",
     bookAppointmentNow: "Book Appointment Now",
     quickTriageAndServices: "Quick Triage & Services",
@@ -91,7 +90,7 @@ const translations: Record<Language, Record<string, string>> = {
     departments: "الأقسام",
     doctors: "الأطباء",
     healthPackages: "الباقات الصحية",
-    insurance: "التمين",
+    insurance: "التأمين",
     contact: "اتصل بنا",
     blog: "المدونة",
     about: "من نحن",
@@ -105,7 +104,6 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Homepage Hero Section
     careThatFeelsLike: "رعاية تشعرك وكأنك في",
-    home: "منزلك",
     heroSubtitle: "اختبر الرعاية الطبية والسنية والتخصصية المتقدمة مع محترفين متعاطفين مكرسين لصحة عائلتك.",
     bookAppointmentNow: "احجز موعدك الآن",
     quickTriageAndServices: "الفرز السريع والخدمات",
@@ -154,7 +152,7 @@ const translations: Record<Language, Record<string, string>> = {
     flexibleHoursDesc: "مفتوح طوال الأسبوع ليناسب جدول عائلتك المزدحم.",
     acceptedInsurancePartners: "شركاء التأمين المعتمدون",
     checkYourInsuranceCoverage: "تحقق من تغطية تأمينك",
-    ctaBannerTitle: "هل أنت مستعد لتجربة رعاية صحية أفضل؟",
+    ctaBannerTitle: "هل أنت مستعد لتجربة رعاية صحية أفضل?",
     ctaBannerSubtitle: "احجز موعدك عبر الإنترنت أو تحدث مباشرة مع فريق الاستقبال الودود اليوم.",
     quickLinks: "روابط سريعة",
     allRightsReserved: "جميع الحقوق محفوظة"
