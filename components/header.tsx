@@ -58,34 +58,35 @@ export function Header() {
 
   return (
     <Fragment>
-      {/* Top bar */}
-      <div className="hidden bg-muted/50 border-b border-border/40 text-muted-foreground lg:block">
-        <div className="container-wide flex items-center justify-between py-2 text-xs">
+      {/* Luxurious Top Bar */}
+      <div className="hidden bg-gradient-to-r from-slate-950 via-zinc-900 to-slate-950 text-slate-200 border-b border-amber-500/20 lg:block">
+        <div className="container-wide flex items-center justify-between py-2 text-xs tracking-wide">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5 hover:text-primary transition-colors">
-              <Phone className="h-3.5 w-3.5 text-primary" />
-              {siteConfig.phoneDisplay}
-            </span>
-            <span className="text-muted-foreground">
+            <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2 hover:text-amber-400 transition-colors">
+              <Phone className="h-3.5 w-3.5 text-amber-400" />
+              <span className="font-medium">{siteConfig.phoneDisplay}</span>
+            </a>
+            <span className="text-slate-400 flex items-center gap-1.5">
+              <span className="h-1 w-1 rounded-full bg-amber-400/60"></span>
               {siteConfig.address.area}, {siteConfig.address.city}
             </span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-slate-300">
             <button
               onClick={() => toggleLanguage('en')}
               className={cn(
-                'rounded px-2 py-0.5 transition hover:text-primary',
-                lang === 'en' && 'font-bold text-primary underline'
+                'rounded px-2.5 py-0.5 transition hover:text-amber-400',
+                lang === 'en' && 'font-semibold text-amber-400 underline decoration-amber-400/50 underline-offset-4'
               )}
             >
               English
             </button>
-            <span className="text-border">|</span>
+            <span className="text-slate-600">|</span>
             <button
               onClick={() => toggleLanguage('ar')}
               className={cn(
-                'rounded px-2 py-0.5 transition hover:text-primary',
-                lang === 'ar' && 'font-bold text-primary underline'
+                'rounded px-2.5 py-0.5 transition hover:text-amber-400',
+                lang === 'ar' && 'font-semibold text-amber-400 underline decoration-amber-400/50 underline-offset-4'
               )}
             >
               العربية
