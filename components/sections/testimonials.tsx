@@ -35,14 +35,14 @@ export function Testimonials() {
               className="relative rounded-2xl border border-border bg-card p-6 card-hover"
             >
               <Quote className="h-8 w-8 text-primary/20" />
-              <p className="mt-3 text-pretty">{t.text}</p>
+              <p className="mt-3 text-pretty">{t.comment}</p>
               <div className="mt-5 flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 font-semibold text-primary">
                   {t.name.charAt(0)}
                 </div>
                 <div>
                   <div className="font-semibold">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role} · {t.department}</div>
+                  <div className="text-xs text-muted-foreground">{t.department}</div>
                 </div>
                 <div className="ml-auto flex">
                   {[...Array(t.rating)].map((_, j) => (
