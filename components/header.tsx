@@ -58,35 +58,35 @@ export function Header() {
 
   return (
     <Fragment>
-      {/* Luxurious Top Bar */}
-      <div className="hidden bg-gradient-to-r from-slate-950 via-zinc-900 to-slate-950 text-slate-200 border-b border-amber-500/20 lg:block">
+      {/* Luxurious Top Bar matching logo dark blue & cyan palette */}
+      <div className="hidden bg-gradient-to-r from-[#21438f] via-[#1a3573] to-[#12234c] text-white border-b border-[#3bc3f3]/20 lg:block">
         <div className="container-wide flex items-center justify-between py-2 text-xs tracking-wide">
           <div className="flex items-center gap-6">
-            <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2 hover:text-amber-400 transition-colors">
-              <Phone className="h-3.5 w-3.5 text-amber-400" />
+            <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2 hover:text-[#3bc3f3] transition-colors">
+              <Phone className="h-3.5 w-3.5 text-[#3bc3f3]" />
               <span className="font-medium">{siteConfig.phoneDisplay}</span>
             </a>
-            <span className="text-slate-400 flex items-center gap-1.5">
-              <span className="h-1 w-1 rounded-full bg-amber-400/60"></span>
+            <span className="text-white/80 flex items-center gap-1.5">
+              <span className="h-1 w-1 rounded-full bg-[#3bc3f3]"></span>
               {siteConfig.address.area}, {siteConfig.address.city}
             </span>
           </div>
-          <div className="flex items-center gap-4 text-slate-300">
+          <div className="flex items-center gap-4 text-white/90">
             <button
               onClick={() => toggleLanguage('en')}
               className={cn(
-                'rounded px-2.5 py-0.5 transition hover:text-amber-400',
-                lang === 'en' && 'font-semibold text-amber-400 underline decoration-amber-400/50 underline-offset-4'
+                'rounded px-2.5 py-0.5 transition hover:text-[#3bc3f3]',
+                lang === 'en' && 'font-semibold text-[#3bc3f3] underline decoration-[#3bc3f3]/60 underline-offset-4'
               )}
             >
               English
             </button>
-            <span className="text-slate-600">|</span>
+            <span className="text-white/30">|</span>
             <button
               onClick={() => toggleLanguage('ar')}
               className={cn(
-                'rounded px-2.5 py-0.5 transition hover:text-amber-400',
-                lang === 'ar' && 'font-semibold text-amber-400 underline decoration-amber-400/50 underline-offset-4'
+                'rounded px-2.5 py-0.5 transition hover:text-[#3bc3f3]',
+                lang === 'ar' && 'font-semibold text-[#3bc3f3] underline decoration-[#3bc3f3]/60 underline-offset-4'
               )}
             >
               العربية
@@ -106,12 +106,12 @@ export function Header() {
           <div className="flex h-16 items-center justify-between gap-4 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center focus-ring rounded-lg py-1" aria-label={`${siteConfig.name} home`}>
-              <div className="relative flex h-10 w-44 shrink-0 items-center">
+              <div className="relative flex h-11 w-48 shrink-0 items-center">
                 <Image 
-                  src="/Logo.png"
+                  src="/Logo.png" 
                   alt="Manha Medical Center Logo" 
                   fill
-                  sizes="176px"
+                  sizes="192px"
                   className="object-contain object-left" 
                   priority 
                 />
@@ -132,9 +132,9 @@ export function Header() {
                     <Link
                       href={link.href}
                       className={cn(
-                        'flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:text-primary focus-ring',
+                        'flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:text-[#21438f] focus-ring',
                         pathname === link.href || pathname.startsWith(link.href + '/')
-                          ? 'text-primary'
+                          ? 'text-[#21438f] font-semibold'
                           : 'text-foreground/80'
                       )}
                     >
@@ -161,9 +161,9 @@ export function Header() {
                                   <Link
                                     key={item.href}
                                     href={item.href}
-                                    className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-primary/5"
+                                    className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-[#21438f]/5"
                                   >
-                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#21438f]/10 text-[#21438f] transition-colors group-hover:bg-[#21438f] group-hover:text-white">
                                       <Icon className="h-5 w-5" />
                                     </div>
                                     <div>
@@ -180,7 +180,7 @@ export function Header() {
                               <span className="text-xs text-muted-foreground">
                                 {link.items.length} {t(navKey)}
                               </span>
-                              <Link href={link.href} className="flex items-center gap-1 text-xs font-semibold text-primary hover:underline">
+                              <Link href={link.href} className="flex items-center gap-1 text-xs font-semibold text-[#21438f] hover:underline">
                                 {t('seeAll') || 'View all'} <ChevronRight className="h-3 w-3" />
                               </Link>
                             </div>
@@ -205,15 +205,15 @@ export function Header() {
                 <Search className="h-5 w-5" />
               </Button>
               <ThemeToggle />
-              <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
+              <Button asChild variant="outline" size="sm" className="hidden md:inline-flex border-[#21438f]/30 text-[#21438f] hover:bg-[#21438f]/10">
                 <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-1.5">
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-4 w-4 text-[#3bc3f3]" />
                   {t('call')}
                 </a>
               </Button>
-              <Button asChild size="sm" className="hidden md:inline-flex">
+              <Button asChild size="sm" className="hidden md:inline-flex bg-[#21438f] hover:bg-[#1a3573] text-white">
                 <Link href="/book" className="flex items-center gap-1.5">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4 text-[#3bc3f3]" />
                   {t('bookAppointment')}
                 </Link>
               </Button>
@@ -250,7 +250,7 @@ export function Header() {
                     autoFocus
                     aria-label="Search"
                   />
-                  <Button type="submit" size="sm">Search</Button>
+                  <Button type="submit" size="sm" className="bg-[#21438f] hover:bg-[#1a3573] text-white">Search</Button>
                 </form>
               </div>
             </motion.div>
@@ -279,7 +279,7 @@ export function Header() {
                 <Link href="/" className="flex items-center">
                   <div className="relative flex h-10 w-36 shrink-0 items-center">
                     <Image 
-                      src="/logo.png" 
+                      src="/Logo.png" 
                       alt="Manha Medical Center Logo" 
                       fill
                       sizes="144px"
@@ -321,7 +321,7 @@ export function Header() {
                                       <Link
                                         key={item.href}
                                         href={item.href}
-                                        className="rounded-lg px-3 py-2 text-sm text-muted-foreground hover:text-primary"
+                                        className="rounded-lg px-3 py-2 text-sm text-muted-foreground hover:text-[#21438f]"
                                       >
                                         {t(itemKey) || item.title}
                                       </Link>
@@ -346,19 +346,19 @@ export function Header() {
               </nav>
 
               <div className="mt-6 flex flex-col gap-3">
-                <Button asChild size="lg" className="w-full">
+                <Button asChild size="lg" className="w-full bg-[#21438f] hover:bg-[#1a3573] text-white">
                   <Link href="/book" className="flex items-center justify-center gap-2">
-                    <Calendar className="h-5 w-5" />
+                    <Calendar className="h-5 w-5 text-[#3bc3f3]" />
                     {t('bookAppointment')}
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="w-full">
+                <Button asChild variant="outline" size="lg" className="w-full border-[#21438f]/30 text-[#21438f] hover:bg-[#21438f]/10">
                   <a href={`tel:${siteConfig.phone}`} className="flex items-center justify-center gap-2">
-                    <Phone className="h-5 w-5" />
+                    <Phone className="h-5 w-5 text-[#3bc3f3]" />
                     {t('call')} Now
                   </a>
                 </Button>
-                <Button asChild variant="secondary" size="lg" className="w-full">
+                <Button asChild variant="secondary" size="lg" className="w-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20">
                   <a
                     href={`https://wa.me/${siteConfig.whatsapp}`}
                     target="_blank"

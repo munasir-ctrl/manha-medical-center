@@ -1,6 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Fraunces } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
@@ -8,20 +7,6 @@ import { FloatingActions } from '@/components/floating-actions';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { siteConfig } from '@/lib/site';
 import { organizationSchema, searchActionSchema } from '@/lib/schema';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-  adjustFontFallback: true,
-});
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-fraunces',
-  display: 'swap',
-  adjustFontFallback: true,
-});
 
 export const metadata: Metadata = {
   viewport: {
@@ -90,11 +75,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className="font-sans antialiased">
+      <body className="antialiased font-sans">
         <LanguageProvider>
           <ThemeProvider>
             <a

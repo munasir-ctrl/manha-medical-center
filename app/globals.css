@@ -10,16 +10,16 @@
     --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
-    --primary: 200 98% 39%;
+    --primary: 221 62% 35%; /* #21438f - Clinic Deep Blue */
     --primary-foreground: 0 0% 100%;
-    --primary-soft: 200 98% 94%;
+    --primary-soft: 221 62% 94%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222 47% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 172 66% 40%;
-    --accent-foreground: 0 0% 100%;
-    --accent-soft: 172 66% 94%;
+    --accent: 193 88% 60%; /* #3bc3f3 - Clinic Cyan */
+    --accent-foreground: 222 47% 11%;
+    --accent-soft: 193 88% 94%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --success: 142 76% 36%;
@@ -28,10 +28,10 @@
     --warning-foreground: 0 0% 100%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 200 98% 39%;
+    --ring: 221 62% 35%;
     --radius: 1rem;
-    --chart-1: 200 98% 39%;
-    --chart-2: 172 66% 40%;
+    --chart-1: 221 62% 35%;
+    --chart-2: 193 88% 60%;
     --chart-3: 222 47% 30%;
     --chart-4: 38 92% 50%;
     --chart-5: 142 76% 36%;
@@ -44,16 +44,16 @@
     --card-foreground: 210 40% 98%;
     --popover: 222 47% 9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 199 89% 48%;
+    --primary: 193 88% 60%; /* Cyan accent for dark mode contrast */
     --primary-foreground: 222 47% 6%;
-    --primary-soft: 199 60% 15%;
+    --primary-soft: 193 60% 15%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 15%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 173 58% 45%;
-    --accent-foreground: 222 47% 6%;
-    --accent-soft: 173 40% 15%;
+    --accent: 221 62% 55%;
+    --accent-foreground: 210 40% 98%;
+    --accent-soft: 221 40% 15%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --success: 142 71% 45%;
@@ -62,9 +62,9 @@
     --warning-foreground: 222 47% 6%;
     --border: 217.2 32.6% 18%;
     --input: 217.2 32.6% 18%;
-    --ring: 199 89% 48%;
-    --chart-1: 199 89% 48%;
-    --chart-2: 173 58% 45%;
+    --ring: 193 88% 60%;
+    --chart-1: 193 88% 60%;
+    --chart-2: 221 62% 55%;
     --chart-3: 210 40% 70%;
     --chart-4: 38 92% 55%;
     --chart-5: 142 71% 45%;
