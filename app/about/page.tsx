@@ -37,7 +37,7 @@ export default function AboutPage() {
           {/* Hero Image with Glass Border Frame */}
           <div className="relative aspect-[16/9] overflow-hidden rounded-3xl glass p-2 shadow-2xl card-hover mb-12">
             <img 
-              src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              src="/manha-hero.jpg" 
               alt="Manha Medical Center interior" 
               className="h-full w-full object-cover rounded-2xl" 
             />
@@ -46,23 +46,23 @@ export default function AboutPage() {
           {/* Main Content Paragraphs */}
           <div className="glass p-8 sm:p-12 rounded-3xl border border-border/80 shadow-xl space-y-6 text-base sm:text-lg text-muted-foreground text-pretty mb-12">
             <p className="leading-relaxed">
-              Founded in 2007, Manha Medical Center has grown into one of Sharjah's most trusted multidisciplinary medical centers. What began as a small family practice is now a comprehensive healthcare destination serving over 120,000 patients across the UAE.
+              At Wellcare Medical Center, compassionate care and advanced medical expertise come together to provide you and your family with exceptional healthcare services. Since our founding in 2023, we have remained committed to our mission of serving the community with high-quality, patient-centered care.
             </p>
             <p className="leading-relaxed">
-              Our mission is simple: to deliver world-class medical care with the compassion and personal attention that every patient deserves. We believe healthcare should not feel clinical or impersonal — it should feel like being cared for by family.
+              Our dedicated team of skilled physicians, nurses, and support staff brings extensive experience to meet a wide range of healthcare needs. From general practitioners and dentists to specialists in pediatrics, gynecology, and orthodontics, we are here to deliver personalized, comprehensive care tailored to each patient.
             </p>
             <p className="leading-relaxed">
-              With 45+ specialist doctors across 20+ departments, advanced diagnostic technology, and partnerships with over 30 insurance providers, we bring comprehensive, accessible healthcare to families in Muwaileh Commercial and across Sharjah.
+              Our state-of-the-art facility is designed with your comfort and safety in mind, equipped with the latest technology to support precise diagnoses and effective treatments. At Wellcare, every patient is treated with respect and compassion, ensuring a welcoming and supportive environment.
             </p>
           </div>
 
           {/* Stats Grid with Hover Effects */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-16">
             {[
-              { icon: Users, value: '45+', label: 'Specialist Doctors' },
-              { icon: Award, value: '18+', label: 'Years of Care' },
-              { icon: HeartPulse, value: '120K+', label: 'Patients Served' },
-              { icon: ShieldCheck, value: '30+', label: 'Insurance Partners' },
+              { icon: Users, value: '10+', label: 'Specialist Doctors' },
+              { icon: Award, value: '3+', label: 'Years of Care' },
+              { icon: HeartPulse, value: '10k+', label: 'Patients Served' },
+              { icon: ShieldCheck, value: '20+', label: 'Insurance Partners' },
             ].map((s) => (
               <div key={s.label} className="rounded-2xl glass p-6 text-center card-hover border border-border/80">
                 <div className="inline-flex p-3 rounded-xl bg-primary-soft text-primary mb-3">

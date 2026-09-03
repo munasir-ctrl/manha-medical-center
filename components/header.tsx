@@ -29,6 +29,17 @@ const getTranslationKey = (str: string) => {
     .replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
 };
 
+// Helper to format raw slugs or camelCase names into spaced, capitalized display text
+const formatDoctorName = (name: string) => {
+  const clean = name.startsWith('dr-') ? name.replace('dr-', '') : name;
+  // If it's camelCase without hyphens (e.g. drShehaBeegum)
+  const spaced = clean.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return spaced
+    .split(/[- ]/)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -157,6 +168,12 @@ export function Header() {
                               {link.items.map((item) => {
                                 const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[item.icon] || Icons.Circle;
                                 const itemKey = getTranslationKey(item.title);
+                                
+                                // Clean title formatting if it's a doctor list
+                                const displayTitle = link.title.toLowerCase().includes('doctor') 
+                                  ? `Dr. ${formatDoctorName(item.title)}`
+                                  : (t(itemKey) || item.title);
+
                                 return (
                                   <Link
                                     key={item.href}
@@ -168,7 +185,7 @@ export function Header() {
                                     </div>
                                     <div>
                                       <div className="text-sm font-semibold text-foreground">
-                                        {t(itemKey) || item.title}
+                                        {displayTitle}
                                       </div>
                                       <div className="text-xs text-muted-foreground">{item.description}</div>
                                     </div>
@@ -317,13 +334,17 @@ export function Header() {
                                 <div className="ml-3 flex flex-col border-l border-border pl-3">
                                   {link.items.map((item) => {
                                     const itemKey = getTranslationKey(item.title);
+                                    const mobileTitle = link.title.toLowerCase().includes('doctor')
+                                      ? `Dr. ${formatDoctorName(item.title)}`
+                                      : (t(itemKey) || item.title);
+
                                     return (
                                       <Link
                                         key={item.href}
                                         href={item.href}
                                         className="rounded-lg px-3 py-2 text-sm text-muted-foreground hover:text-[#21438f]"
                                       >
-                                        {t(itemKey) || item.title}
+                                        {mobileTitle}
                                       </Link>
                                     );
                                   })}

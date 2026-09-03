@@ -27,14 +27,11 @@ export const siteConfig = {
     lng: 55.3714 
   },
   // Added priceRange for LocalBusiness Schema
-  priceRange: '$$', 
-  openingHours: {
-    days: 'Saturday–Thursday',
-    time: '08:00-23:00',
-    friday: '09:00-23:00'
-  },
+  priceRange: '$$',
+  days: 'Everyday',
+  time: '9:00 AM – 10:30 PM',
   hours: [
-    { day: 'Everyday', time: '8:00 AM – 11:00 PM' },
+    { day: 'Everyday', time: '9:00 AM – 10:30 PM' },
   ],
   social: {
     instagram: 'https://instagram.com/manhamedical',

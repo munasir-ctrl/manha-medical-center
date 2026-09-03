@@ -1,4 +1,6 @@
-import type { Metadata } from 'next';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Sparkles } from 'lucide-react';
 import { Breadcrumbs } from '@/components/breadcrumbs';
@@ -6,13 +8,21 @@ import { siteConfig } from '@/lib/site';
 import { breadcrumbSchema } from '@/lib/schema';
 import { Button } from '@/components/ui/button';
 
-export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Contact Manha Medical Center in Sharjah, UAE. Call us, send a message, or visit our clinic in Commercial Muwailah.',
-  alternates: { canonical: '/contact' },
-};
-
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = `Hello Manha Medical Center, I would like to send a message.\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Message:* ${formData.message}`;
+    const whatsappUrl = `https://wa.me/97165791444?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
       <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact' }]} />
@@ -62,13 +72,13 @@ export default function ContactPage() {
               </a>
 
               {/* Phone 2 / WhatsApp */}
-              <a href="https://wa.me/971563599449" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 rounded-2xl glass p-5 card-hover border border-border/80 group">
+              <a href="https://wa.me/97165791444?text=I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 rounded-2xl glass p-5 card-hover border border-border/80 group">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#25D366]/10 text-[#25D366] shrink-0 transition-transform group-hover:scale-110">
                   <MessageCircle className="h-6 w-6" />
                 </div>
                 <div>
                   <div className="font-display font-semibold text-foreground text-lg">Mobile & WhatsApp</div>
-                  <div className="text-sm text-muted-foreground mt-0.5">+971 56 3599449</div>
+                  <div className="text-sm text-muted-foreground mt-0.5">+971 6 579 1444</div>
                 </div>
               </a>
 
@@ -114,25 +124,60 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <form className="glass p-8 sm:p-10 rounded-3xl border border-border/80 shadow-2xl space-y-5">
+            <form onSubmit={handleSubmit} className="glass p-8 sm:p-10 rounded-3xl border border-border/80 shadow-2xl space-y-5">
               <h2 className="font-display text-2xl font-bold tracking-tight text-foreground mb-2">Send us a message</h2>
               <p className="text-sm text-muted-foreground mb-6">Fill out the form below and our care coordinators will get back to you promptly.</p>
               
               <div>
                 <label htmlFor="name" className="mb-2 block text-sm font-semibold text-foreground">Name</label>
-                <input id="name" name="name" type="text" required className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all" placeholder="Your name" />
+                <input 
+                  id="name" 
+                  name="name" 
+                  type="text" 
+                  required 
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all" 
+                  placeholder="Your name" 
+                />
               </div>
               <div>
                 <label htmlFor="phone2" className="mb-2 block text-sm font-semibold text-foreground">Phone</label>
-                <input id="phone2" name="phone" type="tel" required className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all" placeholder="+971 50 123 4567" />
+                <input 
+                  id="phone2" 
+                  name="phone" 
+                  type="tel" 
+                  required 
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all" 
+                  placeholder="+971 50 123 4567" 
+                />
               </div>
               <div>
                 <label htmlFor="email2" className="mb-2 block text-sm font-semibold text-foreground">Email</label>
-                <input id="email2" name="email" type="email" className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all" placeholder="you@example.com" />
+                <input 
+                  id="email2" 
+                  name="email" 
+                  type="email" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all" 
+                  placeholder="you@example.com" 
+                />
               </div>
               <div>
                 <label htmlFor="message" className="mb-2 block text-sm font-semibold text-foreground">Message</label>
-                <textarea id="message" name="message" rows={4} required className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all resize-none" placeholder="How can we help?" />
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows={4} 
+                  required 
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full rounded-xl border border-input bg-background/80 px-4 py-3 text-sm outline-none focus-ring transition-all resize-none" 
+                  placeholder="How can we help?" 
+                />
               </div>
 
               <Button type="submit" size="lg" className="w-full rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2">

@@ -166,9 +166,9 @@ export function Footer() {
               { title: 'Insurance', href: '/insurance' },
               { title: 'FAQs', href: '/faqs' },
               { title: 'Careers', href: '/career' },
-              { title: 'privacy-policy', href: '/privacy-policy' },
+              { title: 'Privacy Policy', href: '/privacy-policy' },
               { title: 'Terms', href: '/Terms' },
-              { title: 'cookie-policy', href: '/cookie-policy' },
+              { title: 'Cookie Policy', href: '/cookie-policy' },
               { title: 'Sitemap', href: '/sitemap.xml' },
             ].map((l) => (
               <li key={l.href}>

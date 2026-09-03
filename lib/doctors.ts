@@ -16,72 +16,21 @@ export type Doctor = {
 
 export const doctors: Doctor[] = [
   {
-    slug: 'dr-jibran',
-    name: 'Dr. Jibran',
-    title: 'General Dentist',
+    slug: 'dr-sheha-beegum',
+    name: 'Dr. Sheha Beegum',
+    title: 'GP Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
-    bio: 'Dr. Jibran is a general dentist with 12+ years of professional experience offering comprehensive dental care, root canal treatments, and cosmetic dental procedures.',
-    experience: 12,
-    education: [
-      { degree: 'BDS', institution: 'Rajiv Gandhi University of Health Sciences, Karnataka, India', year: '2014' }
-    ],
-    languages: ['English', 'Urdu', 'Hindi', 'Little Pashto', 'Arabic'],
-    awards: [],
-    image: '/Dr. Jibran(GP Dentist).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Root Canal Treatment', 'Dental Extractions', 'Crown & Bridge', 'Veneers', 'Teeth Bleaching']
-  },
-  {
-    slug: 'dr-thasneem',
-    name: 'Dr. Thasneem',
-    title: 'Specialist Orthodontist',
-    specialty: 'Orthodontics',
-    departmentSlug: 'dentistry',
-    bio: 'Dr. Thasneem is a specialist orthodontist with 8+ years of experience providing advanced braces, clear aligners, and customized orthodontic care for children and adults.',
+    bio: 'Dr. Sheha Beegum is a GP dentist with over eight years of experience specializing in aesthetic restorations, teeth whitening, and prosthetic rehabilitation.',
     experience: 8,
     education: [
-      { degree: 'Specialization in Orthodontics', institution: 'Recognized Medical University', year: '2018' }
+      { degree: 'Bachelor of Dental Surgery (BDS)', institution: 'Recognized Dental College', year: '2018' }
     ],
-    languages: ['English', 'Hindi', 'Tamil'],
+    languages: ['English', 'Hindi', 'Malayalam', 'Tamil', 'Arabic (Basic)'],
     awards: [],
-    image: '/Dr. Thasneem(Orthodontist).png',
+    image: '/Dr. Sneha Beegum(GP Dentist).png',
     availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Labial Orthodontics', 'Self-Ligating Braces', 'Clear Aligner Therapy', 'Smile and Bite Correction']
-  },
-  {
-    slug: 'dr-asna-haroon',
-    name: 'Dr. Asna Haroon',
-    title: 'General Dentist',
-    specialty: 'General Dentistry',
-    departmentSlug: 'dentistry',
-    bio: 'Dr. Asna Haroon is a general dentist with 8 years of clinical practice specializing in rotary endodontics, restorative procedures, and pediatric dental care.',
-    experience: 8,
-    education: [
-      { degree: 'BDS', institution: 'PMS Dental College, Trivandrum, Kerala', year: '2018' }
-    ],
-    languages: ['English', 'Arabic', 'Hindi', 'Tamil', 'Malayalam'],
-    awards: [],
-    image: '/Dr.asna-haroon-gp-dentist.png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Root Canal Treatments', 'Cosmetic Dentistry', 'Prosthetic Rehabilitation', 'Pediatric Dental Care']
-  },
-  {
-    slug: 'dr-amna-habib-hassan',
-    name: 'Dr. Amna Habib Hassan',
-    title: 'General Practitioner',
-    specialty: 'General Practice',
-    departmentSlug: 'general-medicine',
-    bio: 'Dr. Amna Habib Hassan is an Australian Medical Council (AMC) qualified general practitioner with 5+ years of experience managing chronic conditions, preventive care, and family health.',
-    experience: 5,
-    education: [
-      { degree: 'MBBS', institution: 'Recognized University', year: '2021' }
-    ],
-    languages: ['English', 'Arabic', 'Hindi', 'Malayalam', 'Urdu'],
-    awards: [],
-    image: '/Dr. Amna Habib Hassan-GP Doctor.png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Diabetes Management', 'Hypertension', 'Preventive Care', 'Common Cold & Flu', 'Thyroid Disorders']
+    conditions: ['Teeth Whitening', 'Surgical and non-surgical extractions', 'Root Canal Therapy', 'Crown And Bridge Placement', 'Prosthetic Rehabilitation', 'Paediatric Dentistry', 'Post And Core Restoration', 'Aesthetic Anterior And Posterior Restoration']
   },
   {
     slug: 'dr-sharmeen-ishaque',
@@ -92,13 +41,13 @@ export const doctors: Doctor[] = [
     bio: 'Dr. Sharmeen Ishaque is a GP dentist with 8+ years of experience offering cosmetic dentistry, extractions, root canals, and Hollywood smile treatments.',
     experience: 8,
     education: [
-      { degree: 'BDS', institution: 'Recognized Dental College', year: '2018' }
+      { degree: 'Bachelor of Dental Surgery (BDS)', institution: 'Recognized Dental College', year: '2018' }
     ],
     languages: ['English', 'Hindi', 'Malayalam', 'Tamil', 'Arabic (Basic)'],
     awards: [],
     image: '/Dr. Sharmeen Ishaque(GP Dentist).png',
     availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Cosmetic Dentistry', 'Surgical Extractions', 'Root Canal Treatments', 'Hollywood Smile', 'Veneers']
+    conditions: ['Cosmetic Dentistry & Basic Restoration', 'Surgical and non-surgical extractions', 'Root Canal Treatments', 'Post And Core Restorations', 'Crowns And Bridges Placement', 'Fixed And Removable Prosthodontics', 'Maxillofacial Trauma Management', 'Dental management of special care and medically compromised', 'Paediatric Dentistry and Fabrication of Habit Breaking Appliance', 'Hollywood Smile and veneers']
   },
   {
     slug: 'dr-aiswarya-shajeev',
@@ -106,50 +55,16 @@ export const doctors: Doctor[] = [
     title: 'General Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
-    bio: 'Dr. Aiswarya Shajeev is a general dentist with 5+ years of experience providing routine check-ups, fillings, crowns, bridges, and teeth whitening.',
-    experience: 5,
-    education: [
-      { degree: 'BDS', institution: 'Recognized Dental College', year: '2021' }
-    ],
-    languages: ['Malayalam', 'English', 'Hindi', 'Kannada', 'Tamil'],
-    awards: [],
-    image: '/Dr. Aiswarya Shajeev(GP Dentist).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Routine Check-ups', 'Fillings', 'Root Canal Treatments', 'Dental Crowns', 'Teeth Whitening']
-  },
-  {
-    slug: 'dr-shamsunnisa-hasham',
-    name: 'Dr. Shamsunnisa Hasham',
-    title: 'MOH Licensed Hijama Practitioner',
-    specialty: 'Traditional & Alternative Medicine',
-    departmentSlug: 'general-medicine',
-    bio: 'Dr. Shamsunnisa Hasham is an MOH licensed Hijama practitioner with 10+ years of experience and a background in emergency medicine and Unani medicine.',
-    experience: 10,
-    education: [
-      { degree: 'Bachelor of Unani Medicines', institution: 'Recognized University', year: '2016' }
-    ],
-    languages: ['English', 'Hindi', 'Urdu', 'Marathi'],
-    awards: [],
-    image: '/Dr. Shamsunnisa Hasham(Hijama).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Neurological Disorders', 'Sports Related Injuries', 'Digestive Disorders', 'Restless Leg Syndrome']
-  },
-  {
-    slug: 'dr-sheha-beegum',
-    name: 'Dr. Sheha Beegum',
-    title: 'GP Dentist',
-    specialty: 'General Dentistry',
-    departmentSlug: 'dentistry',
-    bio: 'Dr. Sheha Beegum is a GP dentist with 8+ years of experience specializing in aesthetic restorations, teeth whitening, and prosthetic rehabilitation.',
+    bio: 'Dr. Aiswarya Shajeev is a general dentist with 8+ years of experience providing comprehensive oral examination, fillings, crowns, bridges, and teeth whitening.',
     experience: 8,
     education: [
       { degree: 'BDS', institution: 'Recognized Dental College', year: '2018' }
     ],
-    languages: ['English', 'Hindi', 'Malayalam', 'Tamil', 'Arabic (Basic)'],
+    languages: ['Malayalam', 'English (fluent)', 'Hindi', 'Kannada & Tamil (basic)'],
     awards: [],
-    image: '/Dr. Sneha Beegum(GP Dentist).png',
+    image: '/Dr. Aiswarya Shajeev(GP Dentist).png',
     availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Teeth Whitening', 'Extractions', 'Root Canal Therapy', 'Crown And Bridge Placement', 'Paediatric Dentistry']
+    conditions: ['Comprehensive Oral Examination', 'Dental Fillings & Restorations', 'Tooth Extractions', 'Root Canal Therapy with Post & Core', 'Restorations and Re-root canal therapy', 'Dental Crowns & Bridges', 'Denture Fabrication & Fitting', 'Orthodontic Evaluation', 'Periodontal Scaling & Polishing', 'Digital X-Rays & Imaging', 'Teeth Whitening', 'Veneers & Laminates', 'Smile Makeovers', 'Pediatric Dentistry', 'Bridal Dentistry/Bridal Smile Makeover']
   },
   {
     slug: 'dr-shameena-zahid',
@@ -166,7 +81,42 @@ export const doctors: Doctor[] = [
     awards: [],
     image: '/Dr. Shameena Zahid(GP Dentist).png',
     availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
-    conditions: ['Dental Check-up', 'Root Canal Treatments', 'Tooth Coloured Fillings', 'Crown and Bridge', 'Dentures']
+    conditions: ['Dental check up and oral examination', 'Root canal treatments', 'Anterior and posterior tooth coloured fillings', 'Crown and bridge', 'Complete and partial dentures', 'Scaling and polishing', 'Minor gingival surgeries', 'Extractions', 'Fluoride treatment', 'Pit and fissure sealants', 'Dental checkup and filling for kids']
+  },
+  {
+    slug: 'dr-jibran',
+    name: 'Dr. Jibran',
+    title: 'General Dentist',
+    specialty: 'General Dentistry',
+    departmentSlug: 'dentistry',
+    bio: 'Dr. Jibran is a general dentist with 12+ years of professional experience offering comprehensive dental care, root canal treatments, and cosmetic dental procedures.',
+    experience: 12,
+    education: [
+      { degree: 'Bachelor of Dental Surgery (BDS)', institution: 'Rajiv Gandhi University of Health Sciences, Karnataka, India', year: '2014' },
+      { degree: 'HKDET Dental College, Hospital & Research Institute', institution: 'Recognized Institute', year: '2014' }
+    ],
+    languages: ['English', 'Urdu', 'Hindi', 'Little Pashto', 'Arabic'],
+    awards: [],
+    image: '/Dr. Jibran(GP Dentist).png',
+    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    conditions: ['General Dentistry', 'Restorative Dentistry', 'Endodontics', 'Aesthetic Dentistry', 'Oral Surgery', 'Laser Dentistry', 'Prosthodontics (Crowns & Bridges)', 'Preventive Dentistry', 'Patient Consultation & Treatment Planning', 'Root Canal Treatment', 'Composite Restorations', 'Dental Extractions', 'Impacted Wisdom Tooth Surgery', 'Crown & Bridge (PFM & Zirconia)', 'Veneers', 'Diastema Closure', 'Crown Lengthening with Osseous Surgery', 'Laser Dentistry', 'Gingivectomy', 'Frenectomy', 'Teeth Bleaching', 'Curettage & Root Planing', 'Dental Medication Prescription']
+  },
+  {
+    slug: 'dr-asna-haroon',
+    name: 'Dr. Asna Haroon',
+    title: 'General Dentist',
+    specialty: 'General Dentistry',
+    departmentSlug: 'dentistry',
+    bio: 'Dr. Asna Haroon is a general dentist with 8 years of clinical practice specializing in rotary endodontics, restorative procedures, and pediatric dental care.',
+    experience: 8,
+    education: [
+      { degree: 'BDS', institution: 'PMS Dental college, Trivandrum, Kerala', year: '2018' }
+    ],
+    languages: ['English', 'Arabic', 'Hindi', 'Tamil', 'Malayalam'],
+    awards: [],
+    image: '/Dr.asna-haroon-gp-dentist.png',
+    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    conditions: ['Patient Diagnosis and Treatment Planning', 'Cosmetic and Restorative Dentistry', 'Root Canal Treatments (Rotary and Hand)', 'Pediatric Dental Care and Patient Counseling', 'Prosthetic Rehabilitation including Post Core, Crown, FPD, RPD, Complete Denture', 'Scaling, Polishing and Preventive Dentistry', 'General Dentistry', 'Restorative Dentistry', 'Endodontics', 'Cosmetic Dentistry', 'Prosthetic Rehabilitation', 'Preventive & Preventive Dentistry', 'Pediatric Dental Care']
   },
   {
     slug: 'dr-vandana-pal-bansal',
@@ -174,10 +124,10 @@ export const doctors: Doctor[] = [
     title: 'Specialist Obstetrics & Gynaecologist',
     specialty: "Women's Health",
     departmentSlug: 'womens-health',
-    bio: 'Dr. Vandana Pal Bansal is a specialist obstetrician and gynaecologist with 20+ years of clinical experience providing expert women’s healthcare, consultations, and ultrasound screenings.',
-    experience: 20,
+    bio: 'Dr. Vandana Pal Bansal is a specialist obstetrician and gynaecologist with 22+ years of clinical experience providing expert women’s healthcare, consultations, and ultrasound screenings.',
+    experience: 22,
     education: [
-      { degree: 'MBBS, MS', institution: 'Recognized Medical University', year: '2006' }
+      { degree: 'MBBS, MS', institution: 'Recognized Medical University', year: '2004' }
     ],
     languages: ['English', 'Hindi'],
     awards: [],

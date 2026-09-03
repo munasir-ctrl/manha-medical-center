@@ -37,13 +37,10 @@ export default function HomePage() {
     
     const clinicPhone = '97165791444'; 
     const message = encodeURIComponent(
-      `✨ *Elite Priority Booking Request* ✨\n\n` +
-      `Hello Manha Medical Center Concierge,\n` +
-      `I wish to secure a priority private consultation.\n\n` +
-      `👤 *Full Name:* ${fullName}\n` +
-      `📞 *Contact Number:* ${contactNumber}\n` +
-      `🩺 *Inquiry / Service:* ${selectedService}\n\n` +
-      `Please coordinate my appointment at your earliest convenience.`
+      `Hello Manha Medical Center, I would like to book an appointment.\n\n` +
+      `*Name:* ${fullName}\n` +
+      `*Phone:* ${contactNumber}\n` +
+      `*Service:* ${selectedService}`
     );
 
     setTimeout(() => {
@@ -166,7 +163,7 @@ export default function HomePage() {
                 </p>
               ) : (
                 <p className="text-[11px] text-white mt-3 font-medium tracking-widest flex items-center justify-center gap-2 uppercase drop-shadow" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>
-                  <ShieldCheck className="h-3.5 w-3.5 text-[#00B4D8]" /> Instant VIP WhatsApp connection • Direct physician routing
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#00B4D8]" /> Instant VIP WhatsApp connection
                 </p>
               )}
             </div>
@@ -219,7 +216,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. OUR EXPERT DOCTORS SECTION */}
+     {/* 2. OUR EXPERT DOCTORS SECTION */}
       <section className="py-20 bg-white border-b border-[#2B5488]/10" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif' }}>
         <div className="container-wide">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -241,22 +238,22 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                name: "Dr. Ahmed Al Hashimi",
-                specialty: "Consultant General & Aesthetic Dentist",
-                qualification: "BDS, MClinDent (London)",
-                experience: "14+ Years Experience"
+                name: "Dr. Sheha Beegum",
+                specialty: "GP Dentist",
+                qualification: "Bachelor of Dental Surgery (BDS)",
+                experience: "8+ Years Experience"
               },
               {
-                name: "Dr. Fatima Zahra",
-                specialty: "Specialist Orthodontist",
-                qualification: "MOrth RCS (Edinburgh), PhD",
-                experience: "12+ Years Experience"
+                name: "Dr. Sharmeen Ishaque",
+                specialty: "GP Dentist",
+                qualification: "Bachelor of Dental Surgery (BDS)",
+                experience: "8+ Years Experience"
               },
               {
-                name: "Dr. Mohammed Tariq",
-                specialty: "General Practitioner & Family Medicine",
-                qualification: "MBBS, MRCGP (UK)",
-                experience: "10+ Years Experience"
+                name: "Dr. Aiswarya Shajeev",
+                specialty: "General Dentist",
+                qualification: "Bachelor of Dental Surgery (BDS)",
+                experience: "8+ Years Experience"
               }
             ].map((doc, idx) => (
               <div key={idx} className="group p-6 rounded-3xl bg-[#F8FAFC] border border-[#2B5488]/10 shadow-sm hover:shadow-xl hover:border-[#00B4D8]/50 transition-all duration-300 flex flex-col justify-between">
@@ -287,11 +284,11 @@ export default function HomePage() {
         <div className="container-wide">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-bold text-[#2B5488] mb-1" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif' }}>15+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-[#2B5488] mb-1" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif' }}>10+</div>
               <p className="text-xs font-semibold text-[#2B5488]/70 uppercase tracking-widest" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>Expert Specialists</p>
             </div>
             <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-bold text-[#2B5488] mb-1" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif' }}>25,000+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-[#2B5488] mb-1" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif' }}>10,000+</div>
               <p className="text-xs font-semibold text-[#2B5488]/70 uppercase tracking-widest" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>Happy Patients</p>
             </div>
             <div className="p-4">
@@ -300,7 +297,7 @@ export default function HomePage() {
             </div>
             <div className="p-4">
               <div className="text-3xl sm:text-4xl font-bold text-[#2B5488] mb-1" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif' }}>24/7</div>
-              <p className="text-xs font-semibold text-[#2B5488]/70 uppercase tracking-widest" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>Emergency Care Support</p>
+              <p className="text-xs font-semibold text-[#2B5488]/70 uppercase tracking-widest" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}> Care Support</p>
             </div>
           </div>
         </div>
@@ -390,7 +387,7 @@ export default function HomePage() {
           </div>
           
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-            {['Daman', 'Nextcare', 'NAS', 'Aafiya', 'Ecare', 'E-Claims', 'Riayati', 'Al Buhaira', 'ADNIC', 'SAICO', 'MedNet', 'Inayah', 'Al Madallah', 'Sukoon'].map((insurer, i) => (
+            {[ 'Nextcare', 'NAS', 'Neuron', 'Ecare', 'E-Claims', 'Riayati', 'SAICO', 'Inayah', 'NGI','Lifeline', 'Fmc'].map((insurer, i) => (
               <div key={i} className="px-5 py-3 rounded-2xl bg-white border border-[#2B5488]/10 text-xs font-semibold text-[#2B5488] shadow-sm" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>
                 {insurer}
               </div>
@@ -428,7 +425,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-[#2B5488]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif' }}>Working Hours</h4>
-                    <p className="text-xs text-[#2B5488]/70 mt-1" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>Saturday to Thursday: 9:00 AM – 10:00 PM<br />Friday: 4:00 PM – 10:00 PM</p>
+                    <p className="text-xs text-[#2B5488]/70 mt-1" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>Saturday to Thursday: 9:00 AM – 10:30 PM</p>
                   </div>
                 </div>
 
