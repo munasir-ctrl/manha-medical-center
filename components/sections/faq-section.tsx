@@ -15,7 +15,7 @@ const faqs = [
   { q: 'How do I book an appointment at Manha Medical Center?', a: 'You can book online through our website, call us directly, or message us on WhatsApp. Online booking takes under 60 seconds and confirms your appointment instantly.' },
   { q: 'Which insurance providers do you accept?', a: 'We are in-network with over 30 major UAE insurers including Daman, Nextcare, ADNIC, AXA Gulf, MetLife, and Oman Insurance. You can verify your coverage online or by calling us.' },
   { q: 'Do you offer pediatric care for newborns?', a: 'Yes. Our pediatrics department provides complete care from birth, including newborn screening, vaccinations following the UAE schedule, and developmental monitoring.' },
-  { q: 'What are your opening hours?', a: 'We are open Saturday through Thursday from 8:00 AM to 11:00 PM, and Friday from 9:00 AM to 11:00 PM. Emergency support is available by phone 24/7.' },
+  { q: 'What are your opening hours?', a: 'We are open Saturday through Thursday from 9:00 AM to 10:30 PM, and Friday from 9:00 AM to 11:00 PM. Emergency support is available by phone 24/7.' },
   { q: 'Do you offer health check-up packages?', a: 'Yes, we offer four packages ranging from Basic Wellness to Prenatal Care. Each includes comprehensive screenings at transparent, all-inclusive prices.' },
   { q: 'Can I get my lab results online?', a: 'Yes. All lab results are uploaded to your secure patient portal, accessible through our website. You receive a notification when results are ready.' },
   { q: 'Is there parking available at the clinic?', a: 'Yes, we offer free on-site parking for all patients. The clinic is located in Muwaileh Commercial, Sharjah, with easy access from Sheikh Mohammed bin Zayed Road.' },

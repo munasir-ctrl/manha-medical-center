@@ -58,4 +58,4 @@ export const siteConfig = {
   metadataBase: new URL('https://manhamedical.ae'),
 } as const;
 
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig; 

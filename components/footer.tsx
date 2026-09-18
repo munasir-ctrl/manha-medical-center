@@ -12,6 +12,7 @@ import {
   Linkedin,
   Send,
   Calendar,
+  ExternalLink,
 } from 'lucide-react';
 import { siteConfig } from '@/lib/site';
 import { departments } from '@/lib/departments';
@@ -88,7 +89,7 @@ export function Footer() {
               </div>
             </div>
           </div>
-          <div className="mt-6 flex gap-2">
+          <div className="mt-6 flex flex-wrap items-center gap-2">
             {[
               { icon: Instagram, href: siteConfig.social.instagram, label: 'Instagram' },
               { icon: Facebook, href: siteConfig.social.facebook, label: 'Facebook' },
@@ -107,6 +108,25 @@ export function Footer() {
                 <s.icon className="h-4 w-4" />
               </a>
             ))}
+
+            {/* Doctify Badge / Link */}
+            <a
+              href="https://www.doctify.com/en-ae/practice/manha-medical-center"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Doctify"
+              className="flex h-9 px-3 items-center justify-center gap-1.5 rounded-full bg-muted text-xs font-medium text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              {/* If you place doctify logo SVG in public folder as /doctify.svg, you can use Image component */}
+              <Image 
+                src="/doctify.svg" 
+                alt="Doctify" 
+                width={16} 
+                height={16} 
+                className="object-contain" 
+              />
+              <span>Doctify</span>
+            </a>
           </div>
         </div>
 
