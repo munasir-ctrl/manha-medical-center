@@ -66,7 +66,7 @@ export default function HomePage() {
             {/* Signature Pill Badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-xl text-white mb-6 shadow-2xl border border-white/20" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif' }}>
               <span className="h-2 w-2 rounded-full bg-[#00B4D8] animate-ping" />
-              <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-white">Commercial Muwailah, Sharjah • Open Today (9:00 AM - 10:00 PM)</span>
+              <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-white">Commercial Muwailah, Sharjah • Open Today (9:00 AM - 10:30 PM)</span>
             </div>
 
             {/* Architectural Headline with Shining Gold Plated Metallic Text */}
