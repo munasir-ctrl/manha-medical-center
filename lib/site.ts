@@ -7,15 +7,15 @@ export const siteConfig = {
     'Manha Medical Center in Sharjah, UAE — a premium multidisciplinary clinic offering family medicine, pediatrics, and 20+ specialties. Book your appointment today.',
   url: 'https://manhamedical.ae',
   // Standardized formats for Schema
-  phone: '+97165550123', 
-  phoneDisplay: '+971 6 555 0123',
-  emergency: '+97165550199',
-  whatsapp: '971501234567',
-  whatsappDisplay: '+971 50 123 4567',
-  email: 'care@manhamedical.ae',
+  phone: '+97165791444', 
+  phoneDisplay: '+971 6 5791444',
+  emergency: '+97165791444',
+  whatsapp: '971563599449',
+  whatsappDisplay: '+971 56 3599449',
+  email: 'info@manhamc.ae',
   address: {
-    street: 'Muwaileh Commercial, Sheikh Mohammed bin Zayed Road',
-    area: 'Muwaileh Commercial',
+    street: 'Commercial Muwailah, Building #6, Ground Floor, Near Med7 Pharmacy, Opposite to Nesto Hypermarket',
+    area: 'Commercial Muwailah',
     city: 'Sharjah',
     emirate: 'Sharjah',
     country: 'United Arab Emirates',
@@ -58,4 +58,4 @@ export const siteConfig = {
   metadataBase: new URL('https://manhamedical.ae'),
 } as const;
 
-export type SiteConfig = typeof siteConfig; 
+export type SiteConfig = typeof siteConfig;
