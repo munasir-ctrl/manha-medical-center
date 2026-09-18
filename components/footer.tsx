@@ -12,7 +12,6 @@ import {
   Linkedin,
   Send,
   Calendar,
-  ExternalLink,
 } from 'lucide-react';
 import { siteConfig } from '@/lib/site';
 import { departments } from '@/lib/departments';
@@ -117,14 +116,9 @@ export function Footer() {
               aria-label="Doctify"
               className="flex h-9 px-3 items-center justify-center gap-1.5 rounded-full bg-muted text-xs font-medium text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
             >
-              {/* If you place doctify logo SVG in public folder as /doctify.svg, you can use Image component */}
-              <Image 
-                src="/doctify.svg" 
-                alt="Doctify" 
-                width={16} 
-                height={16} 
-                className="object-contain" 
-              />
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z" />
+              </svg>
               <span>Doctify</span>
             </a>
           </div>
