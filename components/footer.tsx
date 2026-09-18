@@ -22,6 +22,12 @@ import { Button } from '@/components/ui/button';
 export function Footer() {
   const year = new Date().getFullYear();
 
+  // Pre-filled WhatsApp message for general booking/inquiries
+  const whatsappMessage = encodeURIComponent(
+    `Hello ${siteConfig.name}, I would like to book an appointment. Please guide me through the available slots.`
+  );
+  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${whatsappMessage}`;
+
   return (
     <footer className="mt-20 border-t border-border bg-muted/30">
       {/* CTA banner */}
@@ -37,10 +43,15 @@ export function Footer() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <Link href="/book" className="flex items-center gap-2">
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2"
+              >
                 <Calendar className="h-5 w-5" />
                 Book Appointment
-              </Link>
+              </a>
             </Button>
             <Button asChild variant="outline" size="lg">
               <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2">

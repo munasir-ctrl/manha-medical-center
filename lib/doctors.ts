@@ -29,7 +29,7 @@ export const doctors: Doctor[] = [
     languages: ['English', 'Hindi', 'Malayalam', 'Tamil', 'Arabic (Basic)'],
     awards: [],
     image: '/Dr. Sneha Beegum(GP Dentist).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    availability: 'Available on appointment - Everyday',
     conditions: ['Teeth Whitening', 'Surgical and non-surgical extractions', 'Root Canal Therapy', 'Crown And Bridge Placement', 'Prosthetic Rehabilitation', 'Paediatric Dentistry', 'Post And Core Restoration', 'Aesthetic Anterior And Posterior Restoration']
   },
   {
@@ -46,7 +46,7 @@ export const doctors: Doctor[] = [
     languages: ['English', 'Hindi', 'Malayalam', 'Tamil', 'Arabic (Basic)'],
     awards: [],
     image: '/Dr. Sharmeen Ishaque(GP Dentist).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    availability: 'Available on appointment - Everyday',
     conditions: ['Cosmetic Dentistry & Basic Restoration', 'Surgical and non-surgical extractions', 'Root Canal Treatments', 'Post And Core Restorations', 'Crowns And Bridges Placement', 'Fixed And Removable Prosthodontics', 'Maxillofacial Trauma Management', 'Dental management of special care and medically compromised', 'Paediatric Dentistry and Fabrication of Habit Breaking Appliance', 'Hollywood Smile and veneers']
   },
   {
@@ -63,7 +63,7 @@ export const doctors: Doctor[] = [
     languages: ['Malayalam', 'English (fluent)', 'Hindi', 'Kannada & Tamil (basic)'],
     awards: [],
     image: '/Dr. Aiswarya Shajeev(GP Dentist).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    availability: 'Available on appointment - Everyday',
     conditions: ['Comprehensive Oral Examination', 'Dental Fillings & Restorations', 'Tooth Extractions', 'Root Canal Therapy with Post & Core', 'Restorations and Re-root canal therapy', 'Dental Crowns & Bridges', 'Denture Fabrication & Fitting', 'Orthodontic Evaluation', 'Periodontal Scaling & Polishing', 'Digital X-Rays & Imaging', 'Teeth Whitening', 'Veneers & Laminates', 'Smile Makeovers', 'Pediatric Dentistry', 'Bridal Dentistry/Bridal Smile Makeover']
   },
   {
@@ -80,7 +80,7 @@ export const doctors: Doctor[] = [
     languages: ['English', 'Hindi', 'Malayalam', 'Tamil', 'Arabic (Basic)'],
     awards: [],
     image: '/Dr. Shameena Zahid(GP Dentist).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    availability: 'Available on appointment - Everyday',
     conditions: ['Dental check up and oral examination', 'Root canal treatments', 'Anterior and posterior tooth coloured fillings', 'Crown and bridge', 'Complete and partial dentures', 'Scaling and polishing', 'Minor gingival surgeries', 'Extractions', 'Fluoride treatment', 'Pit and fissure sealants', 'Dental checkup and filling for kids']
   },
   {
@@ -98,7 +98,7 @@ export const doctors: Doctor[] = [
     languages: ['English', 'Urdu', 'Hindi', 'Little Pashto', 'Arabic'],
     awards: [],
     image: '/Dr. Jibran(GP Dentist).png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    availability: 'Available on appointment - Everyday',
     conditions: ['General Dentistry', 'Restorative Dentistry', 'Endodontics', 'Aesthetic Dentistry', 'Oral Surgery', 'Laser Dentistry', 'Prosthodontics (Crowns & Bridges)', 'Preventive Dentistry', 'Patient Consultation & Treatment Planning', 'Root Canal Treatment', 'Composite Restorations', 'Dental Extractions', 'Impacted Wisdom Tooth Surgery', 'Crown & Bridge (PFM & Zirconia)', 'Veneers', 'Diastema Closure', 'Crown Lengthening with Osseous Surgery', 'Laser Dentistry', 'Gingivectomy', 'Frenectomy', 'Teeth Bleaching', 'Curettage & Root Planing', 'Dental Medication Prescription']
   },
   {
@@ -115,7 +115,7 @@ export const doctors: Doctor[] = [
     languages: ['English', 'Arabic', 'Hindi', 'Tamil', 'Malayalam'],
     awards: [],
     image: '/Dr.asna-haroon-gp-dentist.png',
-    availability: 'Sat – Thu, 9:00 AM – 9:00 PM',
+    availability: 'Available on appointment - Everyday',
     conditions: ['Patient Diagnosis and Treatment Planning', 'Cosmetic and Restorative Dentistry', 'Root Canal Treatments (Rotary and Hand)', 'Pediatric Dental Care and Patient Counseling', 'Prosthetic Rehabilitation including Post Core, Crown, FPD, RPD, Complete Denture', 'Scaling, Polishing and Preventive Dentistry', 'General Dentistry', 'Restorative Dentistry', 'Endodontics', 'Cosmetic Dentistry', 'Prosthetic Rehabilitation', 'Preventive & Preventive Dentistry', 'Pediatric Dental Care']
   },
   {

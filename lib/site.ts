@@ -31,7 +31,7 @@ export const siteConfig = {
   days: 'Everyday',
   time: '9:00 AM – 10:30 PM',
   hours: [
-    { day: 'Everyday', time: '9:00 AM – 10:30 PM' },
+    { day: 'Everyday', time: '9:00 AM – 10:30PM' },
   ],
   social: {
     instagram: 'https://instagram.com/manhamedical',

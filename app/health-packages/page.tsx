@@ -61,49 +61,59 @@ export default function HealthPackagesPage() {
 
           {/* Packages Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch mb-20">
-            {filteredPackages.map((pkg) => (
-              <div 
-                key={pkg.slug} 
-                id={pkg.slug} 
-                className={cn(
-                  'relative flex flex-col rounded-3xl glass p-8 card-hover border transition-all duration-300', 
-                  pkg.popular ? 'border-primary shadow-2xl shadow-primary/10 ring-2 ring-primary/20 scale-[1.02] bg-background/80' : 'border-border/80'
-                )}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground shadow-lg shadow-primary/30 flex items-center gap-1">
-                    <Sparkles className="h-3 w-3" /> Most Popular
-                  </div>
-                )}
-                
-                <div className="flex-1 flex flex-col">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">{pkg.category}</span>
-                  <h2 className="font-display text-2xl font-bold text-foreground mb-2">{pkg.name}</h2>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">{pkg.description}</p>
-                  
-                  <div className="flex items-baseline gap-2.5 mb-6 pt-4 border-t border-border/60">
-                    <span className="text-xs text-muted-foreground uppercase font-medium">Starting From</span>
-                    <span className="font-display text-3xl font-extrabold text-primary">AED {pkg.price}</span>
-                  </div>
+            {filteredPackages.map((pkg) => {
+              // Construct WhatsApp URL with a pre-filled message including the package name and price
+              const whatsappMessage = encodeURIComponent(
+                `Hello ${siteConfig.name}, I would like to book an appointment for the "${pkg.name}" package (AED ${pkg.price}). Please guide me through the next steps.`
+              );
+              const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${whatsappMessage}`;
 
-                  <ul className="space-y-3 mb-8 flex-grow">
-                    {pkg.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm">
-                        <Check className="mt-1 h-4 w-4 shrink-0 text-success" />
-                        <span className={f.includes(':') && f.indexOf(':') < 25 ? 'font-bold text-foreground' : 'text-muted-foreground leading-relaxed'}>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <Link 
-                  href="/book" 
-                  className="mt-auto flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90 hover:shadow-primary/30"
+              return (
+                <div 
+                  key={pkg.slug} 
+                  id={pkg.slug} 
+                  className={cn(
+                    'relative flex flex-col rounded-3xl glass p-8 card-hover border transition-all duration-300', 
+                    pkg.popular ? 'border-primary shadow-2xl shadow-primary/10 ring-2 ring-primary/20 scale-[1.02] bg-background/80' : 'border-border/80'
+                  )}
                 >
-                  <Calendar className="h-4 w-4" /> Book Now
-                </Link>
-              </div>
-            ))}
+                  {pkg.popular && (
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground shadow-lg shadow-primary/30 flex items-center gap-1">
+                      <Sparkles className="h-3 w-3" /> Most Popular
+                    </div>
+                  )}
+                  
+                  <div className="flex-1 flex flex-col">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">{pkg.category}</span>
+                    <h2 className="font-display text-2xl font-bold text-foreground mb-2">{pkg.name}</h2>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-6">{pkg.description}</p>
+                    
+                    <div className="flex items-baseline gap-2.5 mb-6 pt-4 border-t border-border/60">
+                      <span className="text-xs text-muted-foreground uppercase font-medium">Starting From</span>
+                      <span className="font-display text-3xl font-extrabold text-primary">AED {pkg.price}</span>
+                    </div>
+
+                    <ul className="space-y-3 mb-8 flex-grow">
+                      {pkg.features.map((f) => (
+                        <li key={f} className="flex items-start gap-2.5 text-sm">
+                          <Check className="mt-1 h-4 w-4 shrink-0 text-success" />
+                          <span className={f.includes(':') && f.indexOf(':') < 25 ? 'font-bold text-foreground' : 'text-muted-foreground leading-relaxed'}>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <a 
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90 hover:shadow-primary/30"
+                  >
+                    <Calendar className="h-4 w-4" /> Book Now
+                  </a>
+                </div>
+              );
+            })}
           </div>
 
           {/* Insurance Eligibility Checker */}
