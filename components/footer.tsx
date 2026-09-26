@@ -229,15 +229,6 @@ export function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-border">
-        <div className="container-wide flex flex-col items-center justify-between gap-4 py-6 text-sm text-muted-foreground md:flex-row">
-          <p>&copy; {year} {siteConfig.name}. All rights reserved.</p>
-          <div className="flex items-center gap-2">
-            <span className="flex h-2 w-2 rounded-full bg-success" />
-            <span>MOH License: {siteConfig.shortName}-SHJ-2024</span>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
   );
 }
