@@ -32,7 +32,6 @@ const getTranslationKey = (str: string) => {
 // Helper to format raw slugs or camelCase names into spaced, capitalized display text
 const formatDoctorName = (name: string) => {
   const clean = name.startsWith('dr-') ? name.replace('dr-', '') : name;
-  // If it's camelCase without hyphens (e.g. drShehaBeegum)
   const spaced = clean.replace(/([a-z])([A-Z])/g, '$1 $2');
   return spaced
     .split(/[- ]/)
@@ -115,14 +114,14 @@ export function Header() {
       >
         <div className="container-wide">
           <div className="flex h-16 items-center justify-between gap-4 lg:h-20">
-            {/* Logo */}
+            {/* Enlarged Logo Container */}
             <Link href="/" className="flex items-center focus-ring rounded-lg py-1" aria-label={`${siteConfig.name} home`}>
-              <div className="relative flex h-11 w-48 shrink-0 items-center">
+              <div className="relative h-12 w-48 sm:h-14 sm:w-60 shrink-0">
                 <Image 
                   src="/Logo.png" 
                   alt="Manha Medical Center Logo" 
                   fill
-                  sizes="192px"
+                  sizes="(max-width: 640px) 192px, 240px"
                   className="object-contain object-left" 
                   priority 
                 />
@@ -169,7 +168,6 @@ export function Header() {
                                 const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[item.icon] || Icons.Circle;
                                 const itemKey = getTranslationKey(item.title);
                                 
-                                // Clean title formatting if it's a doctor list
                                 const displayTitle = link.title.toLowerCase().includes('doctor') 
                                   ? `Dr. ${formatDoctorName(item.title)}`
                                   : (t(itemKey) || item.title);
@@ -294,12 +292,12 @@ export function Header() {
             >
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center">
-                  <div className="relative flex h-10 w-36 shrink-0 items-center">
+                  <div className="relative h-11 w-44 shrink-0">
                     <Image 
                       src="/Logo.png" 
                       alt="Manha Medical Center Logo" 
                       fill
-                      sizes="144px"
+                      sizes="176px"
                       className="object-contain object-left" 
                     />
                   </div>
