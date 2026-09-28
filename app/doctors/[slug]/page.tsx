@@ -7,7 +7,7 @@ import { physicianSchema, breadcrumbSchema } from '@/lib/schema';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { CtaBanner } from '@/components/cta-banner';
 import { Button } from '@/components/ui/button';
-import { Clock, Globe, Award, GraduationCap, ArrowLeft, Calendar } from 'lucide-react';
+import { Clock, Globe, Award, GraduationCap, ArrowLeft } from 'lucide-react';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -22,14 +22,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const doctor = getDoctor(slug);
   if (!doctor) return {};
 
+  const fullName = `Dr. ${doctor.name}`;
+
   return {
-    title: `${doctor.name} - ${doctor.title} | Manha Medical Center`,
+    title: `${fullName} - ${doctor.title} | Manha Medical Center`,
     description: doctor.bio,
     alternates: { canonical: `/doctors/${doctor.slug}` },
     openGraph: {
-      title: `${doctor.name} - ${doctor.title}`,
+      title: `${fullName} - ${doctor.title}`,
       description: doctor.bio,
-      images: [{ url: doctor.image, width: 800, height: 600, alt: doctor.name }],
+      images: [{ url: doctor.image, width: 800, height: 600, alt: fullName }],
       type: 'profile',
     },
   };
@@ -40,27 +42,29 @@ export default async function DoctorPage({ params }: PageProps) {
   const doctor = getDoctor(slug);
   if (!doctor) notFound();
 
+  const fullName = `Dr. ${doctor.name}`;
+
   const breadcrumbItems = [
     { name: 'Home', url: '/' },
     { name: 'Doctors', url: '/doctors' },
-    { name: doctor.name, url: `/doctors/${doctor.slug}` },
+    { name: fullName, url: `/doctors/${doctor.slug}` },
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
       <Breadcrumbs items={breadcrumbItems} />
 
-      <main className="relative section-pad bg-radial-gradient">
-        <div className="absolute inset-0 bg-grid-pattern/30 pointer-events-none" />
-
-        <div className="relative z-10 container-wide max-w-4xl">
-          <div className="glass p-8 rounded-3xl border border-border/80 shadow-xl grid gap-8 md:grid-cols-[1fr_2fr] items-start mb-12">
+      <main className="relative py-12 sm:py-16 md:py-24 bg-background">
+        <div className="relative z-10 container-wide max-w-4xl px-4 sm:px-6 lg:px-8">
+          
+          {/* Main Hero Profile Card */}
+          <div className="bg-card p-6 sm:p-10 rounded-2xl border border-border/80 shadow-sm grid gap-8 md:grid-cols-[1fr_2fr] items-start mb-12">
             
             {/* Doctor Image */}
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted shadow-md">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-muted border border-border/40 shadow-inner">
               <Image
                 src={doctor.image}
-                alt={doctor.name}
+                alt={fullName}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 300px"
@@ -70,28 +74,32 @@ export default async function DoctorPage({ params }: PageProps) {
 
             {/* Doctor Overview */}
             <div className="space-y-4">
-              <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-primary-soft text-primary">
+              <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase rounded-md bg-primary/10 text-primary">
                 {doctor.specialty}
               </span>
-              <h1 className="font-display text-3xl font-extrabold text-foreground tracking-tight">
-                {doctor.name}
+              <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+                {fullName}
               </h1>
-              <p className="text-lg font-medium text-muted-foreground">{doctor.title}</p>
+              <p className="text-base sm:text-lg font-medium text-muted-foreground border-b border-border/60 pb-4">{doctor.title}</p>
               
-              <div className="pt-2 space-y-2 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-primary" />
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <div className="flex items-center gap-3">
+                  <Clock className="h-4 w-4 text-primary shrink-0" />
                   <span>{doctor.availability}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Globe className="h-4 w-4 text-primary" />
-                  <span>Languages: {doctor.languages.join(', ')}</span>
+                <div className="flex items-center gap-3">
+                  <Globe className="h-4 w-4 text-primary shrink-0" />
+                  <span>Languages Spoken: {doctor.languages.join(', ')}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Award className="h-4 w-4 text-primary shrink-0" />
+                  <span>{doctor.experience}+ Years of Clinical Experience</span>
                 </div>
               </div>
 
               <div className="pt-4 flex gap-4">
-                <Button asChild size="lg" className="rounded-xl">
-                  <Link href={`/book?doctor=${doctor.slug}`}>Book Appointment</Link>
+                <Button asChild size="lg" className="rounded-xl w-full sm:w-auto shadow-sm">
+                  <Link href={`/book?doctor=${doctor.slug}`}>Book Consultation</Link>
                 </Button>
               </div>
             </div>
@@ -99,18 +107,18 @@ export default async function DoctorPage({ params }: PageProps) {
 
           {/* Detailed Info Sections */}
           <div className="space-y-8">
-            <section className="glass p-6 rounded-2xl border border-border/80">
-              <h2 className="font-display text-xl font-bold text-foreground mb-3">About {doctor.name}</h2>
-              <p className="text-muted-foreground leading-relaxed">{doctor.bio}</p>
+            <section className="bg-card p-6 sm:p-8 rounded-2xl border border-border/80 shadow-sm">
+              <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 border-b border-border/40 pb-3">Biography</h2>
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{doctor.bio}</p>
             </section>
 
             {/* Conditions Treated */}
             {doctor.conditions.length > 0 && (
-              <section className="glass p-6 rounded-2xl border border-border/80">
-                <h2 className="font-display text-xl font-bold text-foreground mb-4">Treatments & Conditions</h2>
+              <section className="bg-card p-6 sm:p-8 rounded-2xl border border-border/80 shadow-sm">
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 border-b border-border/40 pb-3">Treatments & Conditions</h2>
                 <div className="flex flex-wrap gap-2">
                   {doctor.conditions.map((condition, i) => (
-                    <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-xl bg-background/50 border border-border/80 text-foreground">
+                    <span key={i} className="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-secondary/50 border border-border/60 text-secondary-foreground">
                       {condition}
                     </span>
                   ))}
@@ -120,15 +128,15 @@ export default async function DoctorPage({ params }: PageProps) {
 
             {/* Education */}
             {doctor.education.length > 0 && (
-              <section className="glass p-6 rounded-2xl border border-border/80">
-                <h2 className="font-display text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+              <section className="bg-card p-6 sm:p-8 rounded-2xl border border-border/80 shadow-sm">
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 border-b border-border/40 pb-3 flex items-center gap-2">
                   <GraduationCap className="h-5 w-5 text-primary" /> Education & Credentials
                 </h2>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {doctor.education.map((edu, i) => (
-                    <li key={i} className="text-sm">
-                      <strong className="text-foreground block">{edu.degree}</strong>
-                      <span className="text-muted-foreground">{edu.institution} ({edu.year})</span>
+                    <li key={i} className="text-sm sm:text-base border-l-2 border-primary/40 pl-4 py-0.5">
+                      <strong className="text-foreground block font-semibold">{edu.degree}</strong>
+                      <span className="text-muted-foreground text-xs sm:text-sm">{edu.institution} ({edu.year})</span>
                     </li>
                   ))}
                 </ul>
@@ -136,9 +144,9 @@ export default async function DoctorPage({ params }: PageProps) {
             )}
 
             <div>
-              <Button asChild variant="outline" size="lg" className="rounded-xl">
+              <Button asChild variant="outline" size="lg" className="rounded-xl border-border">
                 <Link href="/doctors">
-                  <ArrowLeft className="mr-2 h-4 w-4" /> Back to all doctors
+                  <ArrowLeft className="mr-2 h-4 w-4" /> Back to All Doctors
                 </Link>
               </Button>
             </div>
@@ -154,7 +162,7 @@ export default async function DoctorPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             physicianSchema({
-              name: doctor.name,
+              name: fullName,
               slug: doctor.slug,
               title: doctor.title,
               specialty: doctor.specialty,

@@ -48,7 +48,8 @@ export function DoctorsCarousel() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <div className="text-lg font-semibold">{doc.name}</div>
+                      {/* Added Dr. prefix here */}
+                      <div className="text-lg font-semibold">Dr. {doc.name}</div>
                       <div className="text-sm text-white/80">{doc.title}</div>
                     </div>
                   </div>

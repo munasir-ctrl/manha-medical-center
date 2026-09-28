@@ -17,7 +17,7 @@ export type Doctor = {
 export const doctors: Doctor[] = [
   {
     slug: 'dr-sheha-beegum',
-    name: 'Dr. Sheha Beegum',
+    name: 'Sheha Beegum',
     title: 'GP Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
@@ -34,7 +34,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-sharmeen-ishaque',
-    name: 'Dr. Sharmeen Ishaque',
+    name: 'Sharmeen Ishaque',
     title: 'GP Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
@@ -51,7 +51,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-aiswarya-shajeev',
-    name: 'Dr. Aiswarya Shajeev',
+    name: 'Aiswarya Shajeev',
     title: 'GP Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
@@ -68,7 +68,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-asna-haroon',
-    name: 'Dr. Asna Haroon',
+    name: 'Asna Haroon',
     title: 'GP Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
@@ -85,7 +85,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-jibran',
-    name: 'Dr. Jibran',
+    name: 'Jibran',
     title: 'GP Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
@@ -102,7 +102,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-shameena-zahid',
-    name: 'Dr. Shameena Zahid',
+    name: 'Shameena Zahid',
     title: 'GP Dentist',
     specialty: 'General Dentistry',
     departmentSlug: 'dentistry',
@@ -119,7 +119,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-thasneem',
-    name: 'Dr. Thasneem',
+    name: 'Thasneem',
     title: 'Orthodontist',
     specialty: 'Orthodontics',
     departmentSlug: 'dentistry',
@@ -136,7 +136,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-shamsunnisa-hasham',
-    name: 'Dr. Shamsunnisa Hasham',
+    name: 'Shamsunnisa Hasham',
     title: 'Hijama Specialist',
     specialty: 'Hijama / Cupping Therapy',
     departmentSlug: 'alternative-medicine',
@@ -153,14 +153,14 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-amna-habib-hassan',
-    name: 'Dr. Amna Habib Hassan',
+    name: 'Amna Habib Hassan',
     title: 'GP Doctor',
     specialty: 'General Medicine',
     departmentSlug: 'general-medicine',
     bio: 'Dr. Amna Habib Hassan is a General Practice physician providing comprehensive primary healthcare, preventive screenings, and management of acute and chronic conditions.',
     experience: 7,
     education: [
-      { degree: 'MBBS', institution: 'Recognized Medical University', year: '2019' }
+      { degree: 'MBBS', institution: '', year: '2019' }
     ],
     languages: ['English', 'Arabic', 'Hindi'],
     awards: [],
@@ -170,7 +170,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-heena-kauser-mohammed',
-    name: 'Dr. Heena Kauser Mohammed',
+    name: 'Heena Kauser Mohammed',
     title: 'GP Doctor',
     specialty: 'General Medicine',
     departmentSlug: 'general-medicine',
@@ -187,7 +187,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-iffath',
-    name: 'Dr. Iffath',
+    name: 'Iffath',
     title: 'GP Doctor',
     specialty: 'General Medicine',
     departmentSlug: 'general-medicine',
@@ -204,14 +204,14 @@ export const doctors: Doctor[] = [
   },
   {
     slug: 'dr-vandana-pal-bansal',
-    name: 'Dr. Vandana Pal Bansal',
+    name: 'Vandana Pal Bansal',
     title: 'Specialist Obstetrics & Gynaecologist',
     specialty: "Women's Health",
     departmentSlug: 'womens-health',
     bio: 'Dr. Vandana Pal Bansal is a specialist obstetrician and gynaecologist with 22+ years of clinical experience providing expert women’s healthcare, consultations, and ultrasound screenings.',
     experience: 22,
     education: [
-      { degree: 'MBBS, MS', institution: 'Recognized Medical University', year: '2004' }
+      { degree: 'MBBS, MS', institution: '', year: '2004' }
     ],
     languages: ['English', 'Hindi'],
     awards: [],
